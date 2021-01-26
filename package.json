@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "prettier": "2.2.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.3",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  },
+  "name": "my-homepage",
+  "version": "1.0.0",
+  "main": "postcss.config.js",
+  "scripts": {
+    "build": "postcss css/styles.css -o public/build/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

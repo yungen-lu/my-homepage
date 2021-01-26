@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    padding: 10%;
+}
+h1 {
+    font-size: 4.5em;
+    margin-bottom: 1em;
+
+}
+p {
+    font-size: 1.6em;
+    max-width: 28em;
+}
