@@ -10,15 +10,15 @@ export function addRender(arrayOfBalls: Ball[], world: World, pixiApp: PIXI.Appl
   ball.addPyshics(world, e.clientX, e.clientY);
   pixiApp.stage.addChild(ball.graphics);
   arrayOfBalls.push(ball);
-  console.log(ball)
+  // console.log(ball)
   pixiApp.ticker.add(ball.render, ball);
   // pixiApp.ticker.add(() => {
   //   ball.render();
   // })
 }
-function renderWrapper(this: Ball) {
-  this.render();
-}
+// function renderWrapper(this: Ball) {
+//   this.render();
+// }
 export function setBorder(world: World, pixiApp: PIXI.Application) {
   const E: number = 20;
   let ground = Bodies.rectangle(window.innerWidth / 2, window.innerHeight + E, window.innerWidth, 1, { isStatic: true, restitution: 1 });
@@ -38,10 +38,10 @@ export function setBorder(world: World, pixiApp: PIXI.Application) {
 export function checkBallCount(arrayOfBalls: Ball[], world: World, pixiApp: PIXI.Application) {
   const maxBallCount: number = 3;
   while (arrayOfBalls.length > maxBallCount) {
-    console.log("maxed!");
+    // console.log("maxed!");
     let removedBall = arrayOfBalls.shift();
     if (removedBall) {
-      console.log("ball shifted")
+      // console.log("ball shifted")
       removedBall.destroy(world, pixiApp)
       // World.remove(world, removedBall.body);
       // removedBall.graphics.destroy();
