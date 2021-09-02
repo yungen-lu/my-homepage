@@ -1,9 +1,10 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const svgToMiniDataURI = require('mini-svg-data-uri');
+
 module.exports = {
   mode: "development",
   entry: "./src/main.ts",
-  devtool: 'inline-source-map',
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "./dist")
@@ -20,7 +21,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-      }
+      },
     ]
   },
   resolve: {
@@ -28,3 +29,4 @@ module.exports = {
   }
 
 }
+

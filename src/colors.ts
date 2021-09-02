@@ -1,5 +1,5 @@
 import hsl from "hsl-to-hex"
-import { randomNumInRange } from "./util"
+import * as PIXI from "pixi.js"
 export class ColorPalette {
   hue: number;
   complimentaryHue1: number;
@@ -49,10 +49,17 @@ export class ColorPalette {
 
   randomColor(): number {
     // pick a random color
-    return Number(this.colorChoices[Math.floor(randomNumInRange(0, this.colorChoices.length))].replace(
-      '#',
-      '0x'
-    ));
+    // let test = Number(this.colorChoices[Math.floor(randomNumInRange(0, this.colorChoices.length))].replace(
+    //   '#',
+    //   '0x'
+    // ));
+    // console.log(test)
+    // return test
+    let randomNum = Math.floor(randomNumInRange(0, this.colorChoices.length))
+    // console.log("randomNum", randomNum);
+    let choosed = this.colorChoices[randomNum];
+    // console.log("choosed", choosed, typeof (choosed))
+    return PIXI.utils.string2hex(choosed)
   }
 
   setCustomProperties() {
@@ -68,3 +75,7 @@ export class ColorPalette {
     );
   }
 }
+function randomNumInRange(min: number, max: number): number {
+  return Math.random() * (max - min) + min;
+}
+

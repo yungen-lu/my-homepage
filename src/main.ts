@@ -1,3 +1,4 @@
+import "../css/styles.css"
 import { Engine, Runner } from "matter-js"
 import { addRender, setBorder, checkBallCount } from "./functions";
 import { Ball } from "./balls"
@@ -19,9 +20,9 @@ const pixiApp = new PIXI.Application({
   backgroundAlpha: 0
 })
 //
-pixiApp.stage.filters = [new KawaseBlurFilter(10, 10, true)];
+pixiApp.stage.filters = [new KawaseBlurFilter(30, 10, true)];
 
-setBorder(world);
+setBorder(world, pixiApp);
 window.addEventListener('click', (e) => {
   checkBallCount(arrayOfBalls, world, pixiApp);
   addRender(arrayOfBalls, world, pixiApp, e)

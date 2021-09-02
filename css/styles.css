@@ -1,6 +1,22 @@
 /* @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Noto+Sans+TC&display=swap'); */
+@import "@fortawesome/fontawesome-free/css/all.css";
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import "@fortawesome/fontawesome-free/css/all.css";
-
+/* @import "@fortawesome/fontawesome-free/css/brands.css" */
+:root {
+  --base: hsl(var(--hue), 95%, 50%);
+  --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
+}
+#gradient-text {
+  background-image: linear-gradient(
+    45deg,
+    var(--base) 25%,
+    var(--complimentary2)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}

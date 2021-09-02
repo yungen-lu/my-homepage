@@ -1,4 +1,4 @@
-import { randomNumInRange } from "./util"
+// import { randomNumInRange } from "./util"
 import { World, Bodies, Composite } from "matter-js"
 import * as PIXI from "pixi.js"
 export class Ball {
@@ -43,3 +43,7 @@ export class Ball {
     this.graphics.alpha = 1;
   }
 }
+function randomNumInRange(min: number, max: number): number {
+  return Math.random() * (max - min) + min;
+}
+

@@ -19,7 +19,7 @@ export function addRender(arrayOfBalls: Ball[], world: World, pixiApp: PIXI.Appl
 function renderWrapper(this: Ball) {
   this.render();
 }
-export function setBorder(world: World) {
+export function setBorder(world: World, pixiApp: PIXI.Application) {
   const E: number = 20;
   let ground = Bodies.rectangle(window.innerWidth / 2, window.innerHeight + E, window.innerWidth, 1, { isStatic: true, restitution: 1 });
   let leftWall = Bodies.rectangle(0 - E, window.innerHeight / 2, 1, window.innerHeight, { isStatic: true, restitution: 1 });
@@ -32,6 +32,7 @@ export function setBorder(world: World) {
     Body.setPosition(rightWall, { x: window.innerWidth + E, y: window.innerHeight / 2 });
     Body.setPosition(celling, { x: window.innerWidth / 2, y: 0 - E });
   }, 250))
+  pixiApp.ticker.update();
 
 }
 export function checkBallCount(arrayOfBalls: Ball[], world: World, pixiApp: PIXI.Application) {
@@ -48,5 +49,5 @@ export function checkBallCount(arrayOfBalls: Ball[], world: World, pixiApp: PIXI
       // pixiApp.ticker.destroy()
     }
   }
-  console.log(arrayOfBalls.length)
+  // console.log(arrayOfBalls.length)
 }
