@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const svgToMiniDataURI = require('mini-svg-data-uri');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: "development",
@@ -11,6 +12,8 @@ module.exports = {
   },
   plugins: [new MiniCssExtractPlugin({
     filename: "styles.css"
+  }), new HtmlWebpackPlugin({
+    template: 'src/index.html'
   })],
   module: {
     rules: [
