@@ -5,9 +5,18 @@ import { ColorPalette } from "./colors"
 import * as PIXI from "pixi.js"
 
 const colorPalette = new ColorPalette();
-export function addRender(arrayOfBalls: Ball[], world: World, pixiApp: PIXI.Application, e: MouseEvent) {
+export function addRender(arrayOfBalls: Ball[], world: World, pixiApp: PIXI.Application, e: MouseEvent | TouchEvent) {
   const ball = new Ball(colorPalette.randomColor());
-  ball.addPyshics(world, e.clientX, e.clientY);
+  let X: number = "clientX" in e ? e.clientX : e.touches[0].clientX;
+  let Y: number = "clientY" in e ? e.clientY : e.touches[0].clientY;
+  // if ("clientX" in e) {
+  //   X = e.clientX;
+  //   Y = e.clientY;
+  // } else {
+  //   X = e.touches[0].clientX;
+  //   Y = e.touches[0].clientY;
+  // }
+  ball.addPyshics(world, X, Y);
   pixiApp.stage.addChild(ball.graphics);
   arrayOfBalls.push(ball);
   // console.log(ball)

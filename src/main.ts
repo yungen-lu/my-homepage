@@ -28,4 +28,9 @@ window.addEventListener('click', (e) => {
   addRender(arrayOfBalls, world, pixiApp, e)
 
 })
+window.addEventListener('touchstart', (e) => {
+  checkBallCount(arrayOfBalls, world, pixiApp);
+  addRender(arrayOfBalls, world, pixiApp, e)
+
+})
 
