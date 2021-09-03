@@ -23,7 +23,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack.dev.js",
-    "build-prod": "webpack --config webpack.prod.js --node-env=production --mode=production"
+    "build-prod": "webpack --config webpack.prod.js --node-env=production"
   },
   "dependencies": {
     "@pixi/filter-kawase-blur": "^4.1.3",
