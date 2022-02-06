@@ -1,16 +1,13 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
 module.exports = {
-  purge: [
-    "./src/index.html"
-  ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "class",
+  content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      zIndex: {
-        '-10': '-10',
-      }
-
-    }
+      fontFamily: {
+        sans: ['"IBM Plex Sans"', ...fontFamily.sans],
+      },
+    },
   },
-  variants: {},
   plugins: [],
-}
+};

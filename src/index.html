@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="favicon.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css">
+      <script type="module" src="main.ts"></script>
+    <title>My Homepage</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <link rel="stylesheet" href="styles.css" /> -->
-  <title>My Homepage</title>
-</head>
+  <body>
+    <canvas
+      id="main-canvas"
+      class="bg-white dark:bg-slate-900 fixed top-0 left-0 h-full w-full -z-10"
+    ></canvas>
+    <div
+      id="target-area"
+      class="fixed top-0 left-0 h-full w-full z-0"
+    >
+    <div class="py-20 px-11 md:px-32">
+      <h1>
+        <span id="title" class="text-5xl md:text-7xl font-semibold font-sans text-transparent bg-clip-text  from-[color:var(--starting-color)] via-[color:var(--middle-color)] to-[color:var(--ending-color)]">Hello</span>
+      </h1>
 
-<body class="px-14 py-7 font-mono">
-  <canvas id="ball-canvas" class="fixed top-0 left-0 h-full w-full -z-10"></canvas>
-  <div class="container mx-auto">
-    <h1 class="text-6xl text-red-400 font-bold mb-0"><span id="gradient-text">Hello</span></h1>
-    <p class="my-5 text-3xl">My name is Yungen</p>
-    <p class="my-5 text-1xl font-light">
-      I am a student at NCKU(National Cheng Kung University), studying Computer Science and Information Engineering.
-    </p>
-    <p class="my-5 text-1xl font-light">
-      If you want to know more about me, below are some links of my socials.
-    </p>
-    <div class="flex">
-      <div class="flex-1 justify-items-center text-gray-400">
-        <a href="https://github.com/yungen-lu"><i class="fab fa-github fa-2x hover:text-gray-500"></i></a>
-        <a href="https://twitter.com/yungenlu"><i class="fab fa-twitter fa-2x hover:text-gray-500"></i></a>
-        <a href="https://www.instagram.com/yungen.lu/"><i class="fab fa-instagram fa-2x hover:text-gray-500"></i></a>
-        <a href="https://www.linkedin.com/in/yungen-lu-ba1073204"><i
-            class="fab fa-linkedin-in fa-2x hover:text-gray-500"></i></a>
+      <p class="my-5 text-2xl md:text-3xl text-slate-900 dark:text-white font-normal md:font-medium font-sans">
+        My name is Yungen
+      </p>
+      <p
+        class="text-1xl md:text-2xl text-slate-500 dark:text-slate-400 my-4 text-left max-w-md font-extralight md:font-light font-sans"
+      >
+        I am a student at NCKU (National Cheng Kung University), studying
+        Computer Science and Information Engineering.
+      </p>
+      <p
+        class="text-1xl md:text-2xl text-slate-500 dark:text-slate-400 my-4 text-left max-w-md font-extralight md:font-light font-sans"
+      >
+        If you want to know more about me, below are some links of my socials.
+      </p>
+      <div class="flex flex-row max-w-xs">
+        <!-- <div class="flex-1"></div> -->
+        <a href="https://github.com/yungen-lu"><icon class="h-8 w-8 md:h-10 md:w-10 basis-1/4 mx-1 fill-black dark:fill-white hover:fill-gray-500 " src="icons/github-logo.svg"></a>
+        <a href="https://twitter.com/yungenlu"><icon class="h-8 w-8 z-50 md:h-10 md:w-10 basis-1/4 mx-1 fill-black dark:fill-white hover:fill-gray-500" src="icons/twitter-logo.svg"></a>
+        <a href="https://www.instagram.com/yungen.lu/"><icon class="h-8 w-8 z-50 md:h-10 md:w-10 basis-1/4 mx-1 fill-black dark:fill-white hover:fill-gray-500" src="icons/instagram-logo.svg"></a>
+        <a href="https://www.linkedin.com/in/yungen-lu-ba1073204"><icon class="h-8 w-8 z-50 md:h-10 md:w-10 basis-1/4 mx-1 fill-black dark:fill-white hover:fill-gray-500" src="icons/linkedin-logo.svg"></a>
+
       </div>
+      <footer class="mt-5 text-xs text-black dark:text-slate-400 md:text-sm font-extralight font-sans">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Yungen Lu All rights reserved.<br />
+      </footer>
     </div>
-
-    <footer class="mt-5">&copy;
-      <script>document.write(new Date().getFullYear());</script> Yungen Lu All rights reserved.<br>
-    </footer>
-  </div>
-</body>
-<!-- <script src="bundle.js"></script> -->
-
+    </div>
+  </body>
 </html>
+
+
